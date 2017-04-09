@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+/* Commands */
+Route::group(['prefix' => 'command'], function(){
+  Route::get('start-gps', 'LocationController@startGps');
+  Route::get('stop-gps','LocationController@stopGps');
+});
