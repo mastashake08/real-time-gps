@@ -24,3 +24,10 @@ Route::group(['prefix' => 'command'], function(){
   Route::get('start-gps', 'LocationController@startGps');
   Route::get('stop-gps','LocationController@stopGps');
 });
+
+/* Activation */
+Route::group(['prefix' => 'activation'], function(){
+  Route::get('/','ActivationController@getView');
+  Route::post('/','ActivationController@activateDevice');
+  Route::post('/register','ActivationController@registerDevice');
+});

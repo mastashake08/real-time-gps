@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SendCommand' => [
             'App\Listeners\SendCommandListener',
         ],
+        'App\Events\LocationCreated' => [
+          'App\Listeners\LocationCreatedListener'
+        ]
     ];
 
     /**
